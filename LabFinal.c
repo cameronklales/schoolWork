@@ -61,7 +61,7 @@ sei(); // Enable global interrupts
 			if (count >1)
 			{
 				count--;
-			}else{
+			}else{ // if count <= 0, reset
 				count = 100;
 			}
 		}
@@ -71,21 +71,21 @@ sei(); // Enable global interrupts
 		}
 		if (mode == 4)
 		{
-			if ((count%2) == 1)
+			if ((count%2) == 1) // if number is odd, set to even
 			{
 				count++;
 			}
-			count += 2;
+		count += 2;//count by 2s
 		}
 		if (mode == 5)
 		{
-		if ((count%2) == 0)
+		if ((count%2) == 0) //if number is even, set to odd
 			{
 				count++;
 			}
-			count += 2;
+		count += 2;
 		}
-		if (count > 100)
+		if (count > 100) // reset counter if counter is > 0
 		{
 			count = 0;
 		}
